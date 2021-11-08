@@ -8,3 +8,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "YugiohCardsApp"
 include ':app'
+include ':core'
+include ':constants'
+include ':yugiohcard'
+include ':yugiohcard:yugiohcard-datasource'
+include ':yugiohcard:yugiohcard-datasource-test'
+include ':yugiohcard:yugiohcard-domain'
+include ':yugiohcard:yugiohcard-interactors'

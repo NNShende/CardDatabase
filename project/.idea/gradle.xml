@@ -13,6 +13,13 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/constants" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/yugiohcard" />
+            <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource" />
+            <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource-test" />
+            <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-domain" />
+            <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-interactors" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
