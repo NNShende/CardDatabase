@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="1.7">
       <module name="YugiohCardsApp.app" target="11" />
       <module name="YugiohCardsApp.buildSrc" target="11" />
+      <module name="YugiohCardsApp.yugiohcard.ui-yugiohcardList" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

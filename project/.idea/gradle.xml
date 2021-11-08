@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/constants" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/yugiohcard" />
+            <option value="$PROJECT_DIR$/yugiohcard/ui-yugiohcardList" />
             <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource" />
             <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource-test" />
             <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-domain" />
