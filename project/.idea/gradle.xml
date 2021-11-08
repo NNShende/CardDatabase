@@ -13,9 +13,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/components" />
             <option value="$PROJECT_DIR$/constants" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/yugiohcard" />
+            <option value="$PROJECT_DIR$/yugiohcard/ui-yugiohcardDetail" />
             <option value="$PROJECT_DIR$/yugiohcard/ui-yugiohcardList" />
             <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource" />
             <option value="$PROJECT_DIR$/yugiohcard/yugiohcard-datasource-test" />
