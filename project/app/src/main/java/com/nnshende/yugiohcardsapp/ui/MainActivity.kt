@@ -1,21 +1,10 @@
-package com.nnshende.yugiohcardsapp
+package com.nnshende.yugiohcardsapp.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import coil.ImageLoader
 import com.nnshende.core.DataState
 import com.nnshende.core.Logger
@@ -25,6 +14,7 @@ import com.nnshende.ui_yugiohcardlist.YugiohCardList
 import com.nnshende.ui_yugiohcardlist.YugiohCardListState
 import com.nnshende.yugiohcard_domain.YugiohCard
 import com.nnshende.yugiohcard_interactors.YugiohCardInteractors
+import com.nnshende.yugiohcardsapp.R
 import com.nnshende.yugiohcardsapp.ui.theme.YugiohCardsAppTheme
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import kotlinx.coroutines.CoroutineScope
@@ -42,8 +32,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val imageLoader = ImageLoader.Builder(applicationContext)
-            .error(com.nnshende.yugiohcardsapp.R.drawable.yugioh_back)
-            .placeholder(com.nnshende.yugiohcardsapp.R.drawable.yugioh_back)
+            .error(R.drawable.yugioh_back)
+            .placeholder(R.drawable.yugioh_back)
             .availableMemoryPercentage(0.25)
             .crossfade(true)
             .build()

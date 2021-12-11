@@ -3,5 +3,6 @@ apply {
 }
 
 dependencies {
-
+    "implementation"(Hilt.android)
+    "kapt"(Hilt.compiler)
 }
