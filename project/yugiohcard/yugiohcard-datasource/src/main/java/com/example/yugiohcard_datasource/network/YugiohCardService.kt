@@ -1,6 +1,5 @@
 package com.example.yugiohcard_datasource.network
 
-import com.example.yugiohcard_datasource.network.dto.YugiohCardServiceImpl
 import com.example.yugiohcard_domain.YugiohCard
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
@@ -10,7 +9,7 @@ import kotlinx.serialization.json.Json
 
 interface YugiohCardService {
 
-    suspend fun getCardList(page: Int, pageSize: Int): List<YugiohCard>
+    suspend fun getCardList(num: Int, offset: Int): List<YugiohCard>
 
     companion object Factory {
         fun build(): YugiohCardService {

@@ -42,9 +42,14 @@ android {
 }
 
 dependencies{
+    implementation(project(Modules.core))
+    implementation(project(Modules.yugiohcardDomain))
+    implementation(project(Modules.yugiohcardInteractors))
+
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
     implementation(AndroidX.lifecycleVmKtx)
+    implementation(AndroidX.testJUnitKtx)
 
     implementation(Compose.activity)
     implementation(Compose.ui)
@@ -54,4 +59,6 @@ dependencies{
     implementation(Compose.hiltNavigation)
 
     implementation(Google.material)
+
+    testImplementation(Junit.junit4)
 }

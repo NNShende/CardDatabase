@@ -3,5 +3,9 @@ apply {
 }
 
 dependencies {
+    "implementation"(project(Modules.core))
+    "implementation"(project(Modules.yugiohcardDataSource))
+    "implementation"(project(Modules.yugiohcardDomain))
 
+    "implementation"(Kotlinx.coroutinesCore)
 }

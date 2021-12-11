@@ -7,6 +7,9 @@ object AndroidX {
 
     private const val lifecycleVmKtxVersion = "2.4.0-alpha02"
     const val lifecycleVmKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVmKtxVersion"
+
+    private const val testJUnitKtxVersion = "1.1.3"
+    const val testJUnitKtx = "androidx.test.ext:junit-ktx:$testJUnitKtxVersion"
 }
 
 object AndroidXTest {
