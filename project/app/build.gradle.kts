@@ -45,6 +45,7 @@ dependencies{
     implementation(project(Modules.core))
     implementation(project(Modules.yugiohcardDomain))
     implementation(project(Modules.yugiohcardInteractors))
+    implementation(project(Modules.ui_yugiohcardList))
 
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)

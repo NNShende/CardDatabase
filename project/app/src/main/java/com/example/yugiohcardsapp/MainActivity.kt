@@ -20,6 +20,8 @@ import com.example.core.DataState
 import com.example.core.Logger
 import com.example.core.ProgressBarState
 import com.example.core.UIComponent
+import com.example.ui_yugiohcardlist.YugiohCardList
+import com.example.ui_yugiohcardlist.YugiohCardListState
 import com.example.yugiohcard_domain.YugiohCard
 import com.example.yugiohcard_interactors.YugiohCardInteractors
 import com.example.yugiohcardsapp.ui.theme.YugiohCardsAppTheme
@@ -73,22 +75,12 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             YugiohCardsAppTheme {
-                Box(modifier = Modifier.fillMaxSize()) {
-                    if (progressBarState.value is ProgressBarState.Loading) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.align(Alignment.Center)
-                        )
-                    }
-                    LazyColumn {
-                        items(yugiohCards.value) { card ->
-                            Row(
-                                modifier = Modifier.background(Color.LightGray)
-                            ) {
-                                Text(text = card.name)
-                            }
-                        }
-                    }
-                }
+                YugiohCardList(
+                    state = YugiohCardListState(
+                        progressBarState = progressBarState.value,
+                        cards = yugiohCards.value
+                    )
+                )
             }
         }
     }

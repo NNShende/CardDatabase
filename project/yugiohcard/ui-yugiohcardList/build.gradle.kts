@@ -3,5 +3,9 @@ apply {
 }
 
 dependencies {
+    "implementation"(project(Modules.core))
+    "implementation"(project(Modules.yugiohcardDomain))
+    "implementation"(project(Modules.yugiohcardInteractors))
 
+    "implementation"(SqlDelight.androidDriver)
 }
