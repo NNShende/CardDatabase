@@ -21,10 +21,12 @@ class GetYugiohCards(
         try {
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
 
+            delay(1000)
+
             val yugiohCards: List<YugiohCard> = try { // catch network exceptions
                 service.getCardList(
                     num = pageSize,
-                    offset = pageNumber * pageSize
+                    offset = (pageNumber - 1) * pageSize
                 )
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -39,15 +41,15 @@ class GetYugiohCards(
                 emptyList()
             }
 
-//            // caching
-//            cache.insert(yugiohCards)
-//
-//            emit(
-//                DataState.Data(
-//                    if (yugiohCards.isEmpty()) yugiohCards else cache.selectAll()
-//                )
-//            )
-            emit(DataState.Data(yugiohCards))
+            // caching
+            cache.insert(yugiohCards)
+
+            emit(
+                DataState.Data(
+                    if (yugiohCards.isNotEmpty()) yugiohCards
+                    else cache.selectAll()
+                )
+            )
         } catch (e: Exception) {
             e.printStackTrace()
             emit(

@@ -12,7 +12,7 @@ CREATE TABLE  yugiohcard_Entity(
 
 selectAll:
 SELECT *
-FROM yugiohcard_Entity;
+FROM yugiohcard_Entity ORDER BY name;
 
 insertYugiohCard:
 INSERT OR REPLACE
