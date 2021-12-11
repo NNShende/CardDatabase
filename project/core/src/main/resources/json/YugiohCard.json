@@ -1,0 +1,721 @@
+{
+  "data": [
+    {
+      "id": 45078193,
+      "name": "Cyberdark Cannon",
+      "type": "Effect Monster",
+      "desc": "If this card is sent to the GY while equipped to a monster: You can draw 1 card. You can only use each of the following effects of \"Cyberdark Cannon\" once per turn.\r\n● You can discard this card; add 1 Machine \"Cyberdark\" monster from your Deck to your hand.\r\n● During damage calculation, if a monster equipped with this card battles: You can send 1 monster from your Deck to the GY.",
+      "atk": 1600,
+      "def": 800,
+      "level": 3,
+      "race": "Dragon",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.42"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.71"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45078193,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/45078193.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/45078193.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ]
+    },
+    {
+      "id": 5370235,
+      "name": "Cyberdark Chimera",
+      "type": "Effect Monster",
+      "desc": "You can discard 1 Spell/Trap; add 1 \"Power Bond\" from your Deck to your hand, also you cannot use monsters as Fusion Material for the rest of this turn, except Dragon or Machine \"Cyber\" monsters, and once, if you Fusion Summon this turn, you can also use monsters in your GY as Fusion Material by banishing them. If this card is sent to the GY: You can send 1 \"Cyberdark\" monster from your Deck to the GY, with a name different from the cards in your GY. You can only use each effect of \"Cyberdark Chimera\" once per turn.",
+      "atk": 800,
+      "def": 2100,
+      "level": 4,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5370235,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/5370235.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/5370235.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.95",
+          "amazon_price": "3.09",
+          "coolstuffinc_price": "0.49"
+        }
+      ]
+    },
+    {
+      "id": 82562802,
+      "name": "Cyberdark Claw",
+      "type": "Effect Monster",
+      "desc": "If this card is sent to the GY while equipped to a monster: You can target 1 \"Cyberdark\" monster in your GY; add it to your hand. You can only use each of the following effects of \"Cyberdark Claw\" once per turn.\r\n● You can discard this card; add 1 \"Cyberdark\" Spell/Trap from your Deck to your hand.\r\n● During damage calculation, if a monster equipped with this card battles: You can send 1 monster from your Extra Deck to the GY.",
+      "atk": 1600,
+      "def": 800,
+      "level": 3,
+      "race": "Dragon",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.35"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82562802,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/82562802.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/82562802.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ]
+    },
+    {
+      "id": 40418351,
+      "name": "Cyberdark Dragon",
+      "type": "Fusion Monster",
+      "desc": "\"Cyberdark Horn\" + \"Cyberdark Edge\" + \"Cyberdark Keel\"\r\nThis monster cannot be Special Summoned except by Fusion Summon. When this monster is Special Summoned, select 1 Dragon-Type monster in your Graveyard and equip it to this card. This card gains ATK equal to the equipped card's ATK. This card gains 100 ATK for each Monster Card in your Graveyard. If this card would be destroyed by battle, the equipped monster is destroyed instead.",
+      "atk": 1000,
+      "def": 1000,
+      "level": 8,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN035",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "35.75"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "42.66"
+        },
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN086",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "220"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.87"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.44"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40418351,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/40418351.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/40418351.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "19.99",
+          "amazon_price": "39.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ]
+    },
+    {
+      "id": 77625948,
+      "name": "Cyberdark Edge",
+      "type": "Effect Monster",
+      "desc": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. This card can attack directly. If it does using this effect, its ATK is halved during damage calculation only. If this card would be destroyed by battle, destroy the monster equipped to it by its effect, instead.",
+      "atk": 800,
+      "def": 800,
+      "level": 4,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.74"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "84.52"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN053",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "19.99"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.95"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.32"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77625948,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/77625948.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/77625948.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "90.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ]
+    },
+    {
+      "id": 37542782,
+      "name": "Cyberdark End Dragon",
+      "type": "Fusion Monster",
+      "desc": "\"Cyberdark Dragon\" + \"Cyber End Dragon\"\r\nMust be either Fusion Summoned, or Special Summoned by Tributing 1 Level 10 or lower \"Cyberdark\" Fusion Monster equipped with \"Cyber End Dragon\". Unaffected by your opponent's activated effects. Once per turn: You can equip 1 monster from either GY to this card. While this card is equipped with an Equip Card, it can attack a number of times each Battle Phase up to the number of Equip Cards equipped to it.",
+      "atk": 5000,
+      "def": 3800,
+      "level": 12,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37542782,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/37542782.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/37542782.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "19.99",
+          "amazon_price": "2.55",
+          "coolstuffinc_price": "0.79"
+        }
+      ]
+    },
+    {
+      "id": 41230939,
+      "name": "Cyberdark Horn",
+      "type": "Effect Monster",
+      "desc": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. If this card attacks a Defense Position monster, inflict piercing battle damage. If this card would be destroyed by battle, destroy the monster equipped to it by its effect, instead.",
+      "atk": 800,
+      "def": 800,
+      "level": 4,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.1"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "35.98"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN002",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "3.16"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41230939,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/41230939.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/41230939.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "7.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ]
+    },
+    {
+      "id": 80033124,
+      "name": "Cyberdark Impact!",
+      "type": "Spell Card",
+      "desc": "Fusion Summon 1 \"Cyberdark Dragon\" from your Extra Deck, by returning 1 each of \"Cyberdark Horn\", \"Cyberdark Edge\", and \"Cyberdark Keel\" from your hand, GY, and/or anywhere on your field, to the Deck, as Fusion Material.",
+      "race": "Normal",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN094",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "4.95"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.23"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "71.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80033124,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/80033124.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/80033124.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "999.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ]
+    },
+    {
+      "id": 44352516,
+      "name": "Cyberdark Inferno",
+      "type": "Spell Card",
+      "desc": "\"Cyberdark\" Effect Monsters you control that are equipped with an Equip Card cannot be destroyed by your opponent's card effects, also your opponent cannot target them with card effects. You can target 1 \"Cyberdark\" monster you control; return it to the hand, then, immediately after this effect resolves, you can Normal Summon 1 \"Cyberdark\" monster. You can only use this effect of \"Cyberdark Inferno\" once per turn. If this card in its owner's control is destroyed by an opponent's card effect: You can add 1 \"Polymerization\" Spell or \"Fusion\" Spell from your Deck to your hand.",
+      "race": "Field",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.51"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44352516,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/44352516.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/44352516.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "4.99",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ]
+    },
+    {
+      "id": 1157683,
+      "name": "Cyberdark Invasion",
+      "type": "Trap Card",
+      "desc": "Once per turn: You can activate 1 of these effects.\r\n● Target 1 \"Cyberdark\" Effect Monster you control; equip 1 Dragon or Machine monster from either GY to it as an Equip Spell that gives it 1000 ATK.\r\n● Send 1 Equip Card you control equipped to a Machine monster to the GY; destroy 1 card your opponent controls.\r\nYou can only use each effect of \"Cyberdark Invasion\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1157683,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/1157683.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/1157683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ]
+    },
+    {
+      "id": 3019642,
+      "name": "Cyberdark Keel",
+      "type": "Effect Monster",
+      "desc": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. If this card destroys an opponent's monster by battle: Inflict 300 damage to your opponent. If this card would be destroyed by battle, destroy the monster equipped to it by its effect, instead.",
+      "atk": 800,
+      "def": 800,
+      "level": 4,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "11"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN003",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "51.85"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN002",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "3.55"
+        },
+        {
+          "set_name": "Duelist Pack: Zane Truesdale",
+          "set_code": "DP04-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "10.39"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3019642,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/3019642.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/3019642.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "11.10",
+          "coolstuffinc_price": "0.99"
+        }
+      ]
+    },
+    {
+      "id": 64753988,
+      "name": "Cyberdark Realm",
+      "type": "Spell Card",
+      "desc": "When this card is activated: You can add 1 \"Cyberdark\" monster from your Deck to your hand, with a different name from the cards in your GY. During your Main Phase, you can: Immediately after this effect resolves, Normal Summon 1 \"Cyberdark\" monster. You can only use this effect of \"Cyberdark Realm\" once per turn. If you would equip a monster(s) from your GY with a \"Cyberdark\" monster's effect that activates when Normal or Special Summoned, you can equip appropriate monsters from your opponent's GY instead. You can only activate 1 \"Cyberdark Realm\" per turn.",
+      "race": "Continuous",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64753988,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/64753988.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/64753988.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "1.87",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.79"
+        }
+      ]
+    },
+    {
+      "id": 18967507,
+      "name": "Cyberdarkness Dragon",
+      "type": "Fusion Monster",
+      "desc": "5 \"Cyberdark\" Effect Monsters\r\nMust first be Fusion Summoned. If this card is Special Summoned: You can equip 1 Dragon or Machine monster from your GY to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. When your opponent activates a card or effect (Quick Effect): You can send 1 Equip Card you control to the GY; negate the activation, and if you do, destroy that card.",
+      "atk": 2000,
+      "def": 2000,
+      "level": 10,
+      "race": "Machine",
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "18.91"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "10.98"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18967507,
+          "image_url": "https://storage.googleapis.com/ygoprodeck.com/pics/18967507.jpg",
+          "image_url_small": "https://storage.googleapis.com/ygoprodeck.com/pics_small/18967507.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "7.67",
+          "coolstuffinc_price": "0.39"
+        }
+      ]
+    }
+  ]
+}
