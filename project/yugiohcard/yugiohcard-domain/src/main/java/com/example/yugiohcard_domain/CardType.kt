@@ -33,7 +33,7 @@ enum class CardType(name: String) {
     Unknown("unknown"),
 }
 
-fun getCardTypeFromName(name: String): CardType {
+fun getCardType(name: String): CardType {
     val values = CardType.values().toList()
 
     return values.find { it.name == name } ?: CardType.Unknown
