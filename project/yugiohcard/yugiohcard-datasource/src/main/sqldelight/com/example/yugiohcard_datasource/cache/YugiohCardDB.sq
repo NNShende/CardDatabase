@@ -1,0 +1,51 @@
+CREATE TABLE  yugiohcard_Entity(
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    desc TEXT NOT NULL,
+    atk INTEGER,
+    def INTEGER,
+    level INTEGER,
+    race TEXT NOT NULL,
+    attribute TEXT NOT NULL
+);
+
+selectAll:
+SELECT *
+FROM yugiohcard_Entity;
+
+insertYugiohCard:
+INSERT OR REPLACE
+INTO yugiohcard_Entity (
+    id,
+    name,
+    type,
+    desc,
+    atk,
+    def,
+    level,
+    race,
+    attribute
+) VALUES (
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?
+);
+
+searchYugiohCardByName:
+SELECT * FROM yugiohcard_Entity
+WHERE name LIKE ('%' || :query || '%');
+
+getHero:
+SELECT * FROM yugiohcard_Entity
+WHERE id = :id;
+
+removeHero:
+DELETE FROM yugiohcard_Entity
+WHERE id = :id;
