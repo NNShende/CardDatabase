@@ -1,5 +1,6 @@
-package com.example.ui_yugiohcardlist
+package com.example.ui_yugiohcardlist.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -10,9 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil.ImageLoader
+import coil.compose.rememberImagePainter
+import com.example.ui_yugiohcardlist.R
 import com.example.ui_yugiohcardlist.ui.test.TAG_YUGIOH_CARD_DESC
 import com.example.ui_yugiohcardlist.ui.test.TAG_YUGIOH_CARD_NAME
 import com.example.yugiohcard_domain.CardType
@@ -21,8 +27,8 @@ import com.example.yugiohcard_domain.YugiohCard
 @Composable
 fun YugiohCardListItem(
     yugiohCard: YugiohCard,
+    imageLoader: ImageLoader,
     onSelectItem: (Int) -> Unit,
-    // imageLoader: ImageLoader, // TODO
 ){
     Surface(
         modifier = Modifier
@@ -39,11 +45,22 @@ fun YugiohCardListItem(
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ){
-            Box( // TODO(Replace with Image)
+            val image = if (yugiohCard.cardImages.isEmpty()) "" else yugiohCard.cardImages[0].imageUrlSmall
+            val painter = rememberImagePainter(
+                data = image,
+                imageLoader = imageLoader,
+                builder = {
+                    placeholder(R.drawable.yugioh_back)
+                }
+            )
+            Image(
+                painter = painter,
                 modifier = Modifier
-                    .width(100.dp)
-                    .height(70.dp)
+                    .width(70.dp)
+                    .height(100.dp)
                     .background(Color.LightGray),
+                contentDescription = yugiohCard.name,
+                contentScale = ContentScale.Fit
             )
             Column(
                 modifier = Modifier
@@ -70,14 +87,15 @@ fun YugiohCardListItem(
             }
             Column(
                 modifier = Modifier
-                    .fillMaxWidth() // Fill the rest of the width (100% - 80% = 20%)
+                    .fillMaxWidth() // Fill the rest of the width
                     .padding(end = 12.dp),
                 horizontalAlignment = Alignment.End
             ) {
                 Text(
-                    text = yugiohCard.type.name,
+                    text = yugiohCard.type.typeName,
                     style = MaterialTheme.typography.caption,
                     color = getCardTypeColor(yugiohCard.type),
+                    textAlign = TextAlign.End
                 )
             }
         }

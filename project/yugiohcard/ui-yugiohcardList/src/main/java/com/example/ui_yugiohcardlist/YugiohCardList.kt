@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.example.core.ProgressBarState
+import com.example.ui_yugiohcardlist.components.YugiohCardListItem
 
 @Composable
 fun YugiohCardList(
@@ -25,7 +26,7 @@ fun YugiohCardList(
         }
         LazyColumn {
             items(state.cards) { card ->
-                YugiohCardListItem(card) { id ->
+                YugiohCardListItem(yugiohCard = card, imageLoader = state.imageLoader) { id ->
                     Toast.makeText(context, "ID: $id", Toast.LENGTH_SHORT).show()
                 }
             }

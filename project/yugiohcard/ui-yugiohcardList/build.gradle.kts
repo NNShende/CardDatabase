@@ -8,4 +8,6 @@ dependencies {
     "implementation"(project(Modules.yugiohcardInteractors))
 
     "implementation"(SqlDelight.androidDriver)
+
+    "implementation"(Coil.coil)
 }

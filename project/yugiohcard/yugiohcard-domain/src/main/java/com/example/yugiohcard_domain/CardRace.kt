@@ -1,46 +1,45 @@
 @file:Suppress("unused")
 package com.example.yugiohcard_domain
 
-enum class CardRace(name: String) {
+enum class CardRace(val raceName: String) {
     // Monsters
-    Aqua(name = "Aqua"),
-    Beast(name = "Beast"),
-    BeastWarrior(name = "Beast-Warrior"),
-    CreatorGod(name = "Creator-God"),
-    Cyberse(name = "Cyberse"),
-    Dinosaur(name = "Dinosaur"),
-    DivineBeast(name = "Divine-Beast"),
-    Dragon(name = "Dragon"),
-    Fairy(name = "Fairy"),
-    Fiend(name = "Fiend"),
-    Fish(name = "Fish"),
-    Insect(name = "Insect"),
-    Machine(name = "Machine"),
-    Plant(name = "Plant"),
-    Psychic(name = "Psychic"),
-    Pyro(name = "Pyro"),
-    Reptile(name = "Reptile"),
-    Rock(name = "Rock"),
-    SeaSerpent(name = "Sea Serpent"),
-    Spellcaster(name = "Spellcaster"),
-    Thunder(name = "Thunder"),
-    Warrior(name = "Warrior"),
-    WingedBeast(name = "Winged Beast"),
+    Aqua(raceName = "Aqua"),
+    Beast(raceName = "Beast"),
+    BeastWarrior(raceName = "Beast-Warrior"),
+    CreatorGod(raceName = "Creator-God"),
+    Cyberse(raceName = "Cyberse"),
+    Dinosaur(raceName = "Dinosaur"),
+    DivineBeast(raceName = "Divine-Beast"),
+    Dragon(raceName = "Dragon"),
+    Fairy(raceName = "Fairy"),
+    Fiend(raceName = "Fiend"),
+    Fish(raceName = "Fish"),
+    Insect(raceName = "Insect"),
+    Machine(raceName = "Machine"),
+    Plant(raceName = "Plant"),
+    Psychic(raceName = "Psychic"),
+    Pyro(raceName = "Pyro"),
+    Reptile(raceName = "Reptile"),
+    Rock(raceName = "Rock"),
+    SeaSerpent(raceName = "Sea Serpent"),
+    Spellcaster(raceName = "Spellcaster"),
+    Thunder(raceName = "Thunder"),
+    Warrior(raceName = "Warrior"),
+    WingedBeast(raceName = "Winged Beast"),
 
     // Spell/Trap
-    Normal(name = "Normal"), // Both Spell and Trap cards can be this
-    Field(name = "Field"),
-    Equip(name = "Equip"),
-    Continuous(name = "Continuous"), // Both Spell and Trap cards can be this
-    QuickPlay(name = "Quick-Play"),
-    Ritual(name = "Ritual"),
-    Counter(name = "Counter"),
+    Normal(raceName = "Normal"), // Both Spell and Trap cards can be this
+    Field(raceName = "Field"),
+    Equip(raceName = "Equip"),
+    Continuous(raceName = "Continuous"), // Both Spell and Trap cards can be this
+    QuickPlay(raceName = "Quick-Play"),
+    Ritual(raceName = "Ritual"),
+    Counter(raceName = "Counter"),
 
     Unknown("unknown"),
 }
 
 fun getCardRace(name: String): CardRace {
     val values = CardRace.values().toList()
-
-    return values.find { it.name == name } ?: CardRace.Unknown
+    return values.find { it.raceName == name } ?: CardRace.Unknown
 }

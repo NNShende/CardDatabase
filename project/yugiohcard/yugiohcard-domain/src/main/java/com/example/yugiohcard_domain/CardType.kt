@@ -1,42 +1,41 @@
 @file:Suppress("unused")
 package com.example.yugiohcard_domain
 
-enum class CardType(name: String) {
-    EffectMonster(name = "Effect Monster"),
-    FlipEffectMonster(name = "Flip Effect Monster"),
-    FlipTunerEffectMonster(name = "Flip Tuner Effect Monster"),
-    GeminiMonster(name = "Gemini Monster"),
-    NormalMonster(name = "Normal Monster"),
-    NormalTunerMonster(name = "Normal Tuner Monster"),
-    PendulumEffectMonster(name = "Pendulum Effect Monster"),
-    PendulumFlipEffectMonster(name = "Pendulum Flip Effect Monster"),
-    PendulumNormalMonster(name = "Pendulum Normal Monster"),
-    PendulumTunerEffectMonster(name = "Pendulum Tuner Effect Monster"),
-    RitualEffectMonster(name = "Ritual Effect Monster"),
-    RitualMonster(name = "Ritual Monster"),
-    SkillCard(name = "Skill Card"),
-    SpellCard(name = "Spell Card"), // Not a monster
-    SpiritMonster(name = "Spirit Monster"),
-    ToonMonster(name = "Toon Monster"),
-    TrapCard(name = "Trap Card"), // Not a monster
-    TunerMonster(name = "Tuner Monster"),
-    UnionEffectMonster(name = "Union Effect Monster"),
-    FusionMonster(name = "Fusion Monster"),
-    LinkMonster(name = "Link Monster"),
-    PendulumEffectFusionMonster(name = "Pendulum Effect Fusion Monster"),
-    SynchroMonster(name = "Synchro Monster"),
-    SynchroPendulumEffectMonster(name = "Synchro Pendulum Effect Monster"),
-    SynchroTunerMonster(name = "Synchro Tuner Monster"),
-    XYZMonster(name = "XYZ Monster"),
-    XYZPendulumEffectMonster(name = "XYZ Pendulum Effect Monster"),
+enum class CardType(val typeName: String) {
+    EffectMonster(typeName = "Effect Monster"),
+    FlipEffectMonster(typeName = "Flip Effect Monster"),
+    FlipTunerEffectMonster(typeName = "Flip Tuner Effect Monster"),
+    GeminiMonster(typeName = "Gemini Monster"),
+    NormalMonster(typeName = "Normal Monster"),
+    NormalTunerMonster(typeName = "Normal Tuner Monster"),
+    PendulumEffectMonster(typeName = "Pendulum Effect Monster"),
+    PendulumFlipEffectMonster(typeName = "Pendulum Flip Effect Monster"),
+    PendulumNormalMonster(typeName = "Pendulum Normal Monster"),
+    PendulumTunerEffectMonster(typeName = "Pendulum Tuner Effect Monster"),
+    RitualEffectMonster(typeName = "Ritual Effect Monster"),
+    RitualMonster(typeName = "Ritual Monster"),
+    SkillCard(typeName = "Skill Card"),
+    SpellCard(typeName = "Spell Card"), // Not a monster
+    SpiritMonster(typeName = "Spirit Monster"),
+    ToonMonster(typeName = "Toon Monster"),
+    TrapCard(typeName = "Trap Card"), // Not a monster
+    TunerMonster(typeName = "Tuner Monster"),
+    UnionEffectMonster(typeName = "Union Effect Monster"),
+    FusionMonster(typeName = "Fusion Monster"),
+    LinkMonster(typeName = "Link Monster"),
+    PendulumEffectFusionMonster(typeName = "Pendulum Effect Fusion Monster"),
+    SynchroMonster(typeName = "Synchro Monster"),
+    SynchroPendulumEffectMonster(typeName = "Synchro Pendulum Effect Monster"),
+    SynchroTunerMonster(typeName = "Synchro Tuner Monster"),
+    XYZMonster(typeName = "XYZ Monster"),
+    XYZPendulumEffectMonster(typeName = "XYZ Pendulum Effect Monster"),
 
     Unknown("unknown"),
 }
 
 // TODO(Fix this)
-fun getCardType(name: String): CardType {
+fun getCardType(type: String): CardType {
     val values = CardType.values().toList()
 
-    val foundType = values.find { it.name == name } ?: CardType.Unknown
-    return foundType
+    return values.find { it.typeName == type } ?: CardType.Unknown
 }

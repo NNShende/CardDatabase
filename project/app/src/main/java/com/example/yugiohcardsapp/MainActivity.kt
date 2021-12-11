@@ -16,6 +16,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import coil.ImageLoader
 import com.example.core.DataState
 import com.example.core.Logger
 import com.example.core.ProgressBarState
@@ -39,6 +40,13 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val imageLoader = ImageLoader.Builder(applicationContext)
+            .error(R.drawable.yugioh_back)
+            .placeholder(R.drawable.yugioh_back)
+            .availableMemoryPercentage(0.25)
+            .crossfade(true)
+            .build()
 
         val getYugiohCards = YugiohCardInteractors.build(
             sqlDriver = AndroidSqliteDriver(
@@ -78,7 +86,8 @@ class MainActivity : ComponentActivity() {
                 YugiohCardList(
                     state = YugiohCardListState(
                         progressBarState = progressBarState.value,
-                        cards = yugiohCards.value
+                        cards = yugiohCards.value,
+                        imageLoader = imageLoader
                     )
                 )
             }

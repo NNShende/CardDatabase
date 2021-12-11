@@ -52,6 +52,8 @@ dependencies{
     implementation(AndroidX.lifecycleVmKtx)
     implementation(AndroidX.testJUnitKtx)
 
+    implementation(Coil.coil)
+
     implementation(Compose.activity)
     implementation(Compose.ui)
     implementation(Compose.material)

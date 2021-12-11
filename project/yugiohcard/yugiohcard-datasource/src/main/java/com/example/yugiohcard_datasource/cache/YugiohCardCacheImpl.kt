@@ -25,12 +25,12 @@ class YugiohCardCacheImpl(
             queries.insertYugiohCard(
                 id = id.toLong(),
                 name = name,
-                type = type.name,
+                type = type.typeName,
                 desc = desc,
                 atk = atk?.toLong(),
                 def = def?.toLong(),
                 level = level?.toLong(),
-                race = race.name,
+                race = race.raceName,
                 attribute = attribute,
             )
         }
