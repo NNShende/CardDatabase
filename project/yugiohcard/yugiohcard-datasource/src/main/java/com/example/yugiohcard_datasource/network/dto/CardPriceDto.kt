@@ -1,5 +1,6 @@
-package com.example.yugiohcard_datasource
+package com.example.yugiohcard_datasource.network.dto
 
+import com.example.yugiohcard_domain.CardPrice
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,3 +22,13 @@ data class CardPriceDto(
     @SerialName("coolstuffinc_price")
     val coolStuffIncPrice: Float,
 )
+
+fun CardPriceDto.toCardPrice(): CardPrice {
+    return CardPrice(
+        cardMarketPrice = cardMarketPrice,
+        tcgPlayerPrice = tcgPlayerPrice,
+        ebayPrice = ebayPrice,
+        amazonPrice = amazonPrice,
+        coolStuffIncPrice = coolStuffIncPrice
+    )
+}

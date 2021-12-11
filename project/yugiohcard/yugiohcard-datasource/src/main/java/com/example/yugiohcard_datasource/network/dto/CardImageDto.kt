@@ -1,5 +1,6 @@
-package com.example.yugiohcard_datasource
+package com.example.yugiohcard_datasource.network.dto
 
+import com.example.yugiohcard_domain.CardImage
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -15,3 +16,11 @@ data class CardImageDto(
     @SerialName("image_url_small")
     val imageUrlSmall: String
 )
+
+fun CardImageDto.toCardImage(): CardImage {
+    return CardImage(
+        id = id,
+        imageUrl = imageUrl,
+        imageUrlSmall = imageUrlSmall
+    )
+}
