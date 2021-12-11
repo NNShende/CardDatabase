@@ -6,6 +6,7 @@ import com.squareup.sqldelight.db.SqlDriver
 
 data class YugiohCardInteractors(
     val getYugiohCards: GetYugiohCards,
+    val getYugiohCardFromCache: GetYugiohCardFromCache
     // TODO(Add other interactors)
 ) {
     companion object Factory {
@@ -15,6 +16,9 @@ data class YugiohCardInteractors(
             return YugiohCardInteractors(
                 getYugiohCards = GetYugiohCards(
                     service = service,
+                    cache = cache
+                ),
+                getYugiohCardFromCache = GetYugiohCardFromCache(
                     cache = cache
                 )
             )

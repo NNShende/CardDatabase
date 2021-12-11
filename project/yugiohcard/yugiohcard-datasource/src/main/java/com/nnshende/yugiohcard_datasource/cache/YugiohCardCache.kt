@@ -5,7 +5,7 @@ import com.squareup.sqldelight.db.SqlDriver
 
 interface YugiohCardCache {
 
-    suspend fun get(id: Int): YugiohCard
+    suspend fun get(id: Int): YugiohCard?
 
     suspend fun remove(id: Int)
 

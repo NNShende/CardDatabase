@@ -21,8 +21,6 @@ class GetYugiohCards(
         try {
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
 
-            delay(1000)
-
             val yugiohCards: List<YugiohCard> = try { // catch network exceptions
                 service.getCardList(
                     num = pageSize,

@@ -7,7 +7,9 @@ CREATE TABLE  yugiohcard_Entity(
     def INTEGER,
     level INTEGER,
     race TEXT NOT NULL,
-    attribute TEXT
+    attribute TEXT,
+    image_small_url TEXT,
+    image_url TEXT
 );
 
 selectAll:
@@ -25,8 +27,12 @@ INTO yugiohcard_Entity (
     def,
     level,
     race,
-    attribute
+    attribute,
+    image_small_url,
+    image_url
 ) VALUES (
+    ?,
+    ?,
     ?,
     ?,
     ?,

@@ -22,6 +22,9 @@ class YugiohCardCacheImpl(
 
     override suspend fun insert(yugiohCard: YugiohCard) {
         with(yugiohCard) {
+            val smallImageUrl = if (cardImages.isEmpty()) null else cardImages[0].imageUrlSmall
+            val imageUrl = if (cardImages.isEmpty()) null else cardImages[0].imageUrl
+
             queries.insertYugiohCard(
                 id = id.toLong(),
                 name = name,
@@ -32,6 +35,8 @@ class YugiohCardCacheImpl(
                 level = level?.toLong(),
                 race = race.raceName,
                 attribute = attribute,
+                image_small_url = smallImageUrl,
+                image_url = imageUrl
             )
         }
     }
