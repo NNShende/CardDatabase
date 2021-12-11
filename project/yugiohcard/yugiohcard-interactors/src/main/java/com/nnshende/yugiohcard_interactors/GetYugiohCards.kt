@@ -1,8 +1,8 @@
 package com.nnshende.yugiohcard_interactors
 
-import com.nnshende.core.DataState
-import com.nnshende.core.ProgressBarState
-import com.nnshende.core.UIComponent
+import com.nnshende.core.domain.DataState
+import com.nnshende.core.domain.ProgressBarState
+import com.nnshende.core.domain.UIComponent
 import com.nnshende.yugiohcard_datasource.cache.YugiohCardCache
 import com.nnshende.yugiohcard_datasource.network.YugiohCardService
 import com.nnshende.yugiohcard_domain.YugiohCard

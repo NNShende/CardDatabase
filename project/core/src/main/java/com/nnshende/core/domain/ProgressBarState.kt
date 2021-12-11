@@ -1,4 +1,4 @@
-package com.nnshende.core
+package com.nnshende.core.domain
 
 sealed class ProgressBarState {
 

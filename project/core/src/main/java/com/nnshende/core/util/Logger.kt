@@ -1,8 +1,8 @@
-package com.nnshende.core
+package com.nnshende.core.util
 
 class Logger(
     private val TAG: String,
-    private val isDebug: Boolean
+    private val isDebug: Boolean = true
 ) {
     fun log(msg: String) {
         if (!isDebug) {
