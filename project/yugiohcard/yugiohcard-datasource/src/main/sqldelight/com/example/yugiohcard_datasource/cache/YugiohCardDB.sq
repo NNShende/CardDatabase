@@ -7,7 +7,7 @@ CREATE TABLE  yugiohcard_Entity(
     def INTEGER,
     level INTEGER,
     race TEXT NOT NULL,
-    attribute TEXT NOT NULL
+    attribute TEXT
 );
 
 selectAll:
@@ -42,10 +42,10 @@ searchYugiohCardByName:
 SELECT * FROM yugiohcard_Entity
 WHERE name LIKE ('%' || :query || '%');
 
-getHero:
+getYugiohCard:
 SELECT * FROM yugiohcard_Entity
 WHERE id = :id;
 
-removeHero:
+removeYugiohCard:
 DELETE FROM yugiohcard_Entity
 WHERE id = :id;

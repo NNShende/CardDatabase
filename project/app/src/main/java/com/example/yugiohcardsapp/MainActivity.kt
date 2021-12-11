@@ -23,6 +23,7 @@ import com.example.core.UIComponent
 import com.example.yugiohcard_domain.YugiohCard
 import com.example.yugiohcard_interactors.YugiohCardInteractors
 import com.example.yugiohcardsapp.ui.theme.YugiohCardsAppTheme
+import com.squareup.sqldelight.android.AndroidSqliteDriver
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.launchIn
@@ -37,7 +38,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val getYugiohCards = YugiohCardInteractors.build().getYugiohCards
+        val getYugiohCards = YugiohCardInteractors.build(
+            sqlDriver = AndroidSqliteDriver(
+                schema = YugiohCardInteractors.schema,
+                context = this,
+                name = YugiohCardInteractors.dbName,
+            )
+        ).getYugiohCards
         val logger = Logger.Factory.buildDebug("Reeeeeeee")
 
         getYugiohCards.execute(1,25).onEach { dataState ->
@@ -66,8 +73,12 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             YugiohCardsAppTheme {
-                Text(text = "Hello")
                 Box(modifier = Modifier.fillMaxSize()) {
+                    if (progressBarState.value is ProgressBarState.Loading) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.align(Alignment.Center)
+                        )
+                    }
                     LazyColumn {
                         items(yugiohCards.value) { card ->
                             Row(
@@ -76,11 +87,6 @@ class MainActivity : ComponentActivity() {
                                 Text(text = card.name)
                             }
                         }
-                    }
-                    if (progressBarState.value is ProgressBarState.Loading) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.align(Alignment.Center)
-                        )
                     }
                 }
             }

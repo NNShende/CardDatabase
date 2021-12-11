@@ -60,5 +60,7 @@ dependencies{
 
     implementation(Google.material)
 
+    implementation(SqlDelight.androidDriver)
+
     testImplementation(Junit.junit4)
 }

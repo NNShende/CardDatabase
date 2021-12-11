@@ -32,7 +32,7 @@ data class YugiohCardDto(
     val race: String,
 
     @SerialName("attribute")
-    val attribute: String? = null,
+    val attribute: String? = null, // Non-null for monsters
 
     @SerialName("card_sets")
     val cardSets: List<CardSetDto> = emptyList(),
