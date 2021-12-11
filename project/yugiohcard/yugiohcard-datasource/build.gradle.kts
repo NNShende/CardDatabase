@@ -18,7 +18,7 @@ dependencies {
 
 sqldelight {
     database("YugiohCardDatabase") {
-        packageName = "com.example.yugiohcard_datasource.cache"
+        packageName = "com.nnshende.yugiohcard_datasource.cache"
         sourceFolders = listOf("sqldelight")
     }
 }
