@@ -8,11 +8,11 @@ object Modules {
 
     const val constants = ":constants"
 
-    const val hero = ":hero"
-    const val heroDataSource = ":hero:hero-datasource"
-    const val heroDataSourceTest = ":hero:hero-datasource-test"
-    const val heroDomain = ":hero:hero-domain"
-    const val heroInteractors = ":hero:hero-interactors"
-    const val ui_heroDetail = ":hero:ui-heroDetail"
-    const val ui_heroList = ":hero:ui-heroList"
+    const val yugiohcard = ":yugiohcard"
+    const val yugiohcardDataSource = ":yugiohcard:yugiohcard-datasource"
+    const val yugiohcardDataSourceTest = ":yugiohcard:yugiohcard-datasource-test"
+    const val yugiohcardDomain = ":yugiohcard:yugiohcard-domain"
+    const val yugiohcardInteractors = ":yugiohcard:yugiohcard-interactors"
+    const val ui_yugiohcardDetail = ":yugiohcard:ui-yugiohcardDetail"
+    const val ui_yugiohcardList = ":yugiohcard:ui-yugiohcardList"
 }
