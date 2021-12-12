@@ -6,8 +6,8 @@ data class Metadata(
     val rowsRemaining: Int,
     val totalPages: Int,
     val pagesRemaining: Int,
-    val previousPage: String? = null,
+    val previousPageUrl: String? = null,
     val previousPageOffset: Int? = null,
-    val nextPage: String? = null,
+    val nextPageUrl: String? = null,
     val nextPageOffset: Int? = null,
 )

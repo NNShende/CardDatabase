@@ -59,7 +59,7 @@ class YugiohCardListViewModel @Inject constructor(
                     }
                 }
                 is DataState.Data -> {
-                    state.value = state.value.copy(cards = dataState.data ?: emptyList())
+                    state.value = state.value.copy(cards = dataState.data?.data ?: emptyList())
                 }
                 is DataState.Loading -> {
                     state.value = state.value.copy(progressBarState = dataState.progressBarState)

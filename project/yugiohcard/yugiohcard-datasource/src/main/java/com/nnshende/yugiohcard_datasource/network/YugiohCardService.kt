@@ -1,5 +1,6 @@
 package com.nnshende.yugiohcard_datasource.network
 
+import com.nnshende.yugiohcard_domain.ApiResponse
 import com.nnshende.yugiohcard_domain.YugiohCard
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
@@ -9,7 +10,7 @@ import kotlinx.serialization.json.Json
 
 interface YugiohCardService {
 
-    suspend fun getCardList(num: Int, offset: Int, keyword: String): List<YugiohCard>
+    suspend fun getCardList(num: Int, offset: Int, keyword: String): ApiResponse
 
     companion object Factory {
         fun build(): YugiohCardService {
