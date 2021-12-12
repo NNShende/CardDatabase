@@ -44,6 +44,12 @@ fun getCardTypeRgb(type: CardType): Long {
     return when (type) {
         CardType.SpellCard -> 0xff008080
         CardType.TrapCard -> 0xffcc6699
+        CardType.SynchroMonster, CardType.SynchroPendulumEffectMonster, CardType.SynchroTunerMonster -> 0xfff4f2f1
+        CardType.FusionMonster, CardType.PendulumEffectFusionMonster -> 0xff7f599c
+        CardType.SkillCard -> 0xff3ec3e4
+        CardType.XYZMonster, CardType.XYZPendulumEffectMonster -> 0xff000000
+        CardType.RitualMonster, CardType.RitualEffectMonster -> 0xff5788e1
+        CardType.LinkMonster -> 0xff06599d
         else -> 0xffb29870
     }
 }
