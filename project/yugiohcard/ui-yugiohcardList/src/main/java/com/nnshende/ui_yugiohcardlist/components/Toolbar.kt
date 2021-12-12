@@ -74,6 +74,7 @@ fun Toolbar(
                             keyboardController?.hide()
                         },
                     ),
+                    singleLine = true,
                     textStyle = TextStyle(color = MaterialTheme.colors.onSurface),
                     colors = TextFieldDefaults.textFieldColors(backgroundColor = MaterialTheme.colors.surface),
                 )
@@ -92,6 +93,7 @@ fun Toolbar(
                 }
                 Column(
                     modifier = Modifier
+                        .padding(start = 8.dp)
                         .align(Alignment.CenterVertically)
                         .clickable {
                             onShowFilterDialog()

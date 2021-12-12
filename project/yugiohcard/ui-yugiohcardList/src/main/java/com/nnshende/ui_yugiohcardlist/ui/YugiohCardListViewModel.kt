@@ -21,7 +21,7 @@ class YugiohCardListViewModel @Inject constructor(
     private val logger: Logger = Logger.buildDebug(TAG = "YugiohCardListViewModel")
 
     val state: MutableState<YugiohCardListState> = mutableStateOf(YugiohCardListState())
-    private val pageSize = 50
+    private val pageSize = 25
 
     init {
         onTriggerEvent(YugiohCardListEvent.GetYugiohCards(state.value.currentPage))
@@ -79,8 +79,8 @@ class YugiohCardListViewModel @Inject constructor(
                         onPrevPageButtonClick = if (!prevPageExists) {{}} else {prevPageLambda},
                         nextPageButtonEnabled = nextPageExists,
                         onNextPageButtonClick = if (!nextPageExists) {{}} else {nextPageLambda},
-                        onFirstPageButtonClick = if (currentPage != 1) {{}} else {firstPageLambda},
-                        onLastPageButtonClick = if (currentPage != lastPage) {{}} else {lastPageLambda},
+                        onFirstPageButtonClick = if (currentPage == 1) {{}} else {firstPageLambda},
+                        onLastPageButtonClick = if (currentPage == lastPage) {{}} else {lastPageLambda},
                     )
                 }
                 is DataState.Loading -> {
