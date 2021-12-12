@@ -4,6 +4,9 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -77,13 +80,52 @@ fun YugiohCardDetail(
                         Text(
                             text = card.name,
                             textAlign = TextAlign.Left,
-                            style = MaterialTheme.typography.h4,
+                            style = MaterialTheme.typography.h3,
                         )
+                        Spacer(modifier = Modifier.padding(2.dp))
                         Text(
                             text = card.desc,
                             textAlign = TextAlign.Left,
-                            style = MaterialTheme.typography.body1
+                            style = MaterialTheme.typography.body2
                         )
+                        Spacer(modifier = Modifier.padding(2.dp))
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = card.type.typeName,
+                                color = Color(getCardTypeRgb(card.type)),
+                                style = MaterialTheme.typography.body1,
+                            )
+                            Text(
+                                text = card.race.raceName,
+                                color = Color(getCardTypeRgb(card.type)),
+                                style = MaterialTheme.typography.body1,
+                            )
+                        }
+                        Spacer(modifier = Modifier.padding(2.dp))
+                        if (card.atk != null && card.def != null) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.Bottom,
+                                horizontalArrangement = Arrangement.End
+                            ) {
+                                Text(
+                                    text = "ATK: ${card.atk}",
+                                    color = Color.Black,
+                                    style = MaterialTheme.typography.body1,
+                                    textAlign = TextAlign.Right
+                                )
+                                Spacer(modifier = Modifier.padding(12.dp))
+                                Text(
+                                    text = "DEF: ${card.def}",
+                                    color = Color.Black,
+                                    style = MaterialTheme.typography.body1,
+                                    textAlign = TextAlign.Right
+                                )
+                            }
+                        }
                     }
                 }
             }
