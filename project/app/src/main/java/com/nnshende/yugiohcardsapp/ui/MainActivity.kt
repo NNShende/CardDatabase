@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.ImageLoader
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetail
 import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetailViewModel
 import com.nnshende.ui_yugiohcardlist.ui.YugiohCardList
@@ -69,6 +70,7 @@ fun NavGraphBuilder.addYugiohCardList(
     }
 }
 
+@OptIn(ExperimentalPagerApi::class)
 fun NavGraphBuilder.addYugiohCardDetail(
     imageLoader: ImageLoader
 ) {

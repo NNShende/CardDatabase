@@ -35,6 +35,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
         useIR = true
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
     composeOptions {
         kotlinCompilerExtensionVersion = Compose.composeVersion
@@ -52,6 +53,9 @@ dependencies{
     implementation(project(Modules.ui_yugiohcardList))
     implementation(project(Modules.ui_yugiohcardDetail))
 
+    implementation(Accompanist.pager)
+    implementation(Accompanist.pagerIndicator)
+
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
     implementation(AndroidX.lifecycleVmKtx)
@@ -68,10 +72,10 @@ dependencies{
 
     implementation(Google.material)
 
-    implementation(SqlDelight.androidDriver)
-
     implementation(Hilt.android)
     kapt(Hilt.compiler)
+
+    implementation(SqlDelight.androidDriver)
 
     testImplementation(Junit.junit4)
 }

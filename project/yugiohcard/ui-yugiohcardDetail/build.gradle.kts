@@ -9,4 +9,7 @@ dependencies {
     "implementation"(project(Modules.core))
 
     "implementation"(Coil.coil)
+
+    "implementation"(Accompanist.pager)
+    "implementation"(Accompanist.pagerIndicator)
 }

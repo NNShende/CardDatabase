@@ -44,6 +44,6 @@ fun getCardTypeRgb(type: CardType): Long {
     return when (type) {
         CardType.SpellCard -> 0xff008080
         CardType.TrapCard -> 0xffcc6699
-        else -> 0xffcc4400
+        else -> 0xffb29870
     }
 }
