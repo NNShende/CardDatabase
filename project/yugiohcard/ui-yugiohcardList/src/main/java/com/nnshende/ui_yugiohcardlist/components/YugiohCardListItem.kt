@@ -21,8 +21,8 @@ import coil.compose.rememberImagePainter
 import com.nnshende.ui_yugiohcardlist.R
 import com.nnshende.ui_yugiohcardlist.ui.test.TAG_YUGIOH_CARD_DESC
 import com.nnshende.ui_yugiohcardlist.ui.test.TAG_YUGIOH_CARD_NAME
-import com.nnshende.yugiohcard_domain.CardType
 import com.nnshende.yugiohcard_domain.YugiohCard
+import com.nnshende.yugiohcard_domain.getCardTypeRgb
 
 @Composable
 fun YugiohCardListItem(
@@ -94,18 +94,10 @@ fun YugiohCardListItem(
                 Text(
                     text = yugiohCard.type.typeName,
                     style = MaterialTheme.typography.caption,
-                    color = getCardTypeColor(yugiohCard.type),
+                    color = Color(getCardTypeRgb(yugiohCard.type)),
                     textAlign = TextAlign.End
                 )
             }
         }
-    }
-}
-
-private fun getCardTypeColor(type: CardType): Color {
-    return when (type) {
-        CardType.SpellCard -> Color(0xff008080)
-        CardType.TrapCard -> Color(0xffcc6699)
-        else -> Color(0xffcc4400)
     }
 }

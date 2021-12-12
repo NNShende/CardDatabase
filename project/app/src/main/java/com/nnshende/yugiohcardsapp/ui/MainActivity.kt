@@ -10,7 +10,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.ImageLoader
-import com.nnshende.ui_yugiohcarddetail.YugiohCardDetail
+import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetail
+import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetailViewModel
 import com.nnshende.ui_yugiohcardlist.ui.YugiohCardList
 import com.nnshende.ui_yugiohcardlist.ui.YugiohCardListViewModel
 import com.nnshende.yugiohcardsapp.R
@@ -42,7 +43,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = Screen.YugiohCardList.route,
                     builder = {
                         addYugiohCardList(navController = navController, imageLoader = imageLoader)
-                        addYugiohCardDetail()
+                        addYugiohCardDetail(imageLoader = imageLoader)
                     }
                 )
             }
@@ -68,11 +69,14 @@ fun NavGraphBuilder.addYugiohCardList(
     }
 }
 
-fun NavGraphBuilder.addYugiohCardDetail() {
+fun NavGraphBuilder.addYugiohCardDetail(
+    imageLoader: ImageLoader
+) {
     composable(
         route = Screen.YugiohCardDetail.route + "/{id}",
         arguments = Screen.YugiohCardDetail.arguments
     ) {
-        YugiohCardDetail(id = it.arguments?.get("id") as Int?)
+        val viewModel: YugiohCardDetailViewModel = hiltViewModel()
+        YugiohCardDetail(state = viewModel.state.value, imageLoader = imageLoader)
     }
 }

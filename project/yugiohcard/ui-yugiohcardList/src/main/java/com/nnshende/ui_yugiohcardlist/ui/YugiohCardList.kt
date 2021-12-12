@@ -8,7 +8,6 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import coil.ImageLoader
 import com.nnshende.core.domain.ProgressBarState
 import com.nnshende.ui_yugiohcardlist.components.YugiohCardListItem
@@ -19,7 +18,6 @@ fun YugiohCardList(
     imageLoader: ImageLoader,
     navigateToDetailScreen: (Int) -> Unit
 ) {
-    val context = LocalContext.current
     Box(modifier = Modifier.fillMaxSize()) {
         if (state.progressBarState is ProgressBarState.Loading) {
             CircularProgressIndicator(

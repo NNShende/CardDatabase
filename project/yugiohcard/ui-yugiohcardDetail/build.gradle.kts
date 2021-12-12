@@ -3,6 +3,10 @@ apply {
 }
 
 dependencies {
-    "implementation"(Hilt.android)
-    "kapt"(Hilt.compiler)
+
+    "implementation"(project(Modules.yugiohcardInteractors))
+    "implementation"(project(Modules.yugiohcardDomain))
+    "implementation"(project(Modules.core))
+
+    "implementation"(Coil.coil)
 }

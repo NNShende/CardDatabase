@@ -8,8 +8,16 @@ CREATE TABLE  yugiohcard_Entity(
     level INTEGER,
     race TEXT NOT NULL,
     attribute TEXT,
-    image_small_url TEXT,
-    image_url TEXT
+    thumbnail_url TEXT NOT NULL,
+    image_url_1 TEXT NOT NULL,
+    image_url_2 TEXT,
+    image_url_3 TEXT,
+    image_url_4 TEXT,
+    image_url_5 TEXT,
+    image_url_6 TEXT,
+    image_url_7 TEXT,
+    image_url_8 TEXT,
+    image_url_9 TEXT
 );
 
 selectAll:
@@ -28,9 +36,25 @@ INTO yugiohcard_Entity (
     level,
     race,
     attribute,
-    image_small_url,
-    image_url
+    thumbnail_url,
+    image_url_1,
+    image_url_2,
+    image_url_3,
+    image_url_4,
+    image_url_5,
+    image_url_6,
+    image_url_7,
+    image_url_8,
+    image_url_9
 ) VALUES (
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
     ?,
     ?,
     ?,

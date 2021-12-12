@@ -7,6 +7,23 @@ import com.nnshende.yugiohcard_domain.getCardType
 import com.nnshende.yugiohcarddatasource.cache.Yugiohcard_Entity
 
 fun Yugiohcard_Entity.toYugiohCard(): YugiohCard {
+    val cardImageList = cardImages(
+        urlList = listOf(
+            image_url_1,
+            image_url_2,
+            image_url_3,
+            image_url_4,
+            image_url_5,
+            image_url_6,
+            image_url_7,
+            image_url_8,
+            image_url_9
+        ),
+        thumbnailUrl = thumbnail_url,
+        id = id.toInt()
+    )
+
+
     return YugiohCard(
         id = id.toInt(),
         name = name,
@@ -18,13 +35,25 @@ fun Yugiohcard_Entity.toYugiohCard(): YugiohCard {
         race = getCardRace(race),
         attribute = attribute,
         cardSets = emptyList(),
-        cardImages = listOf(
-            CardImage(
-                id = id.toInt(),
-                imageUrl = image_url ?: "", // image fetch will error and show placeholder
-                imageUrlSmall = image_small_url ?: "" // image fetch will error and show placeholder
-            )
-        ),
+        cardImages = cardImageList,
         cardPrices = emptyList(),
     )
+}
+
+private fun cardImages(urlList: List<String?>, thumbnailUrl: String, id: Int): List<CardImage> {
+    val cardImageList = mutableListOf<CardImage>()
+
+    urlList.forEach { url ->
+        url?.let {
+            cardImageList.add(
+                CardImage(
+                    id = id,
+                    imageUrl = url,
+                    imageUrlSmall = thumbnailUrl
+                )
+            )
+        }
+    }
+
+    return cardImageList
 }

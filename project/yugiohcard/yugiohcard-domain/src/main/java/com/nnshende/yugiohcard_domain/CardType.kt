@@ -33,9 +33,17 @@ enum class CardType(val typeName: String) {
     Unknown("unknown"),
 }
 
-// TODO(Fix this)
 fun getCardType(type: String): CardType {
     val values = CardType.values().toList()
 
     return values.find { it.typeName == type } ?: CardType.Unknown
+}
+
+
+fun getCardTypeRgb(type: CardType): Long {
+    return when (type) {
+        CardType.SpellCard -> 0xff008080
+        CardType.TrapCard -> 0xffcc6699
+        else -> 0xffcc4400
+    }
 }

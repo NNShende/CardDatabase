@@ -17,11 +17,7 @@ class GetYugiohCardFromCache(
         try {
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
 
-            val cachedCard = cache.get(id)
-
-            if (cachedCard == null) {
-                throw Exception("That card doesn't exist in the cache.")
-            }
+            val cachedCard = cache.get(id) ?: throw Exception("That card doesn't exist in the cache.")
 
             emit(DataState.Data(cachedCard))
         } catch (e: Exception) {
