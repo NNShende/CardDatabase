@@ -3,6 +3,7 @@ package com.nnshende.yugiohcardsapp.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
@@ -38,7 +39,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             YugiohCardsAppTheme {
-
                 NavHost(
                     navController = navController,
                     startDestination = Screen.YugiohCardList.route,
@@ -52,6 +52,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalComposeUiApi::class)
 fun NavGraphBuilder.addYugiohCardList(
     navController: NavController,
     imageLoader: ImageLoader

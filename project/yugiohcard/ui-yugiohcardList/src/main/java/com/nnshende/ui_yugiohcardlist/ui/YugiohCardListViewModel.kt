@@ -20,13 +20,15 @@ class YugiohCardListViewModel @Inject constructor(
 
     private val logger: Logger = Logger.buildDebug(TAG = "YugiohCardListViewModel")
     val state: MutableState<YugiohCardListState> = mutableStateOf(YugiohCardListState())
+    private val pageNumberState: MutableState<Int> = mutableStateOf(1)
+    private val pageSize = 25
 
     init {
         getYugiohCards()
     }
 
     private fun getYugiohCards() {
-        getYugiohCards.execute(1,25).onEach { dataState ->
+        getYugiohCards.execute(pageNumber = pageNumberState.value, pageSize = pageSize).onEach { dataState ->
             when (dataState) {
                 is DataState.Response -> {
                     when (dataState.uiComponent) {
