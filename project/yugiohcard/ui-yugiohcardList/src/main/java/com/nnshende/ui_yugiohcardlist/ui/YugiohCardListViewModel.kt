@@ -21,7 +21,7 @@ class YugiohCardListViewModel @Inject constructor(
     private val logger: Logger = Logger.buildDebug(TAG = "YugiohCardListViewModel")
 
     val state: MutableState<YugiohCardListState> = mutableStateOf(YugiohCardListState())
-    private val pageSize = 25
+    private val pageSize = 50
 
     init {
         onTriggerEvent(YugiohCardListEvent.GetYugiohCards(state.value.currentPage))
@@ -65,16 +65,22 @@ class YugiohCardListViewModel @Inject constructor(
                     // Metadata related ops
                     val currentPage = state.value.currentPage
                     val metadata = dataState.data?.metaData
+                    val lastPage = metadata?.totalPages?.plus(1) ?: 1
                     val prevPageExists = metadata?.previousPageOffset != null
                     val prevPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(currentPage - 1)) }
                     val nextPageExists = metadata?.nextPageOffset != null
                     val nextPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(currentPage + 1)) }
+                    val firstPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(1)) }
+                    val lastPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(lastPage)) }
                     state.value = state.value.copy(
                         cards = cardList,
+                        totalPages = lastPage,
                         prevPageButtonEnabled = prevPageExists,
                         onPrevPageButtonClick = if (!prevPageExists) {{}} else {prevPageLambda},
                         nextPageButtonEnabled = nextPageExists,
                         onNextPageButtonClick = if (!nextPageExists) {{}} else {nextPageLambda},
+                        onFirstPageButtonClick = if (currentPage != 1) {{}} else {firstPageLambda},
+                        onLastPageButtonClick = if (currentPage != lastPage) {{}} else {lastPageLambda},
                     )
                 }
                 is DataState.Loading -> {
