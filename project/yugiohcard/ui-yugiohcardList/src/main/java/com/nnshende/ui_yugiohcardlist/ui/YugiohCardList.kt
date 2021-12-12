@@ -31,12 +31,13 @@ fun YugiohCardList(
                     onEvent(YugiohCardListEvent.UpdateSearchKeyword(it))
                 },
                 onExecuteSearch = {
-                    onEvent(YugiohCardListEvent.GetYugiohCards)
+                    onEvent(YugiohCardListEvent.GetYugiohCards(1))
                 },
                 onShowFilterDialog = {
                     // TODO
                 }
             )
+            // TODO(pagination)
             LazyColumn {
                 items(state.cards) { card ->
                     YugiohCardListItem(yugiohCard = card, imageLoader = imageLoader) { id ->

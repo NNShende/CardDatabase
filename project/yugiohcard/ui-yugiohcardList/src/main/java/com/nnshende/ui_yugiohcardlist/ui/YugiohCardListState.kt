@@ -7,4 +7,9 @@ data class YugiohCardListState(
     val progressBarState: ProgressBarState = ProgressBarState.Idle,
     val cards: List<YugiohCard> = listOf(),
     val searchKeyword: String = "",
+    val currentPage: Int = 1,
+    val prevPageButtonEnabled: Boolean = false,
+    val onPrevPageButtonClick: () -> Unit = {},
+    val nextPageButtonEnabled: Boolean = false,
+    val onNextPageButtonClick: () -> Unit = {},
 )
