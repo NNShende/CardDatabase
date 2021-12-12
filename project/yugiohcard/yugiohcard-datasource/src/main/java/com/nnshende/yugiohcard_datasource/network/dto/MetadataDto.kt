@@ -22,13 +22,13 @@ data class MetadataDto(
     val pagesRemaining: Int,
 
     @SerialName("previous_page")
-    val previousPage: String? = null,
+    val previousPageUrl: String? = null,
 
     @SerialName("previous_page_offset")
     val previousPageOffset: Int? = null,
 
     @SerialName("next_page")
-    val nextPage: String? = null,
+    val nextPageUrl: String? = null,
 
     @SerialName("next_page_offset")
     val nextPageOffset: Int? = null,

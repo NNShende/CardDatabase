@@ -5,6 +5,7 @@ import com.nnshende.core.domain.ProgressBarState
 import com.nnshende.core.domain.UIComponent
 import com.nnshende.yugiohcard_datasource.cache.YugiohCardCache
 import com.nnshende.yugiohcard_datasource.network.YugiohCardService
+import com.nnshende.yugiohcard_domain.ApiResponse
 import com.nnshende.yugiohcard_domain.YugiohCard
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -18,11 +19,11 @@ class GetYugiohCards(
         pageNumber: Int,
         pageSize: Int,
         keyword: String,
-    ): Flow<DataState<List<YugiohCard>>> = flow {
+    ): Flow<DataState<ApiResponse>> = flow {
         try {
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
 
-            val yugiohCards: List<YugiohCard> = try { // catch network exceptions
+            val apiResponse: ApiResponse? = try { // catch network exceptions
                 service.getCardList(
                     num = pageSize,
                     offset = (pageNumber - 1) * pageSize,
@@ -38,22 +39,21 @@ class GetYugiohCards(
                         )
                     )
                 )
-                emptyList()
+                null
             }
+
+            val yugiohCards = apiResponse?.data ?: throw Exception("No results found")
 
             // caching
             cache.insert(yugiohCards)
 
-            emit(
-                DataState.Data(
-                    if (yugiohCards.isNotEmpty()) yugiohCards
-                    else cache.selectAll()
-                )
-            )
+            // TODO(implement a cached API response)
+
+            emit(DataState.Data(data = apiResponse))
         } catch (e: Exception) {
             e.printStackTrace()
             emit(
-                DataState.Response<List<YugiohCard>>(
+                DataState.Response<ApiResponse>(
                     uiComponent = UIComponent.Dialog(
                         title = "Error",
                         description =  e.message ?: "Unknown Error"

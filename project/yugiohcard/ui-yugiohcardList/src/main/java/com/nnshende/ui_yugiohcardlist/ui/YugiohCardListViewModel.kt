@@ -21,17 +21,17 @@ class YugiohCardListViewModel @Inject constructor(
     private val logger: Logger = Logger.buildDebug(TAG = "YugiohCardListViewModel")
 
     val state: MutableState<YugiohCardListState> = mutableStateOf(YugiohCardListState())
-    private val pageNumberState: MutableState<Int> = mutableStateOf(1)
     private val pageSize = 25
 
     init {
-        onTriggerEvent(YugiohCardListEvent.GetYugiohCards)
+        onTriggerEvent(YugiohCardListEvent.GetYugiohCards(state.value.currentPage))
     }
 
     fun onTriggerEvent(event: YugiohCardListEvent) {
         logger.log("Event Received: $event")
         when (event) {
             is YugiohCardListEvent.GetYugiohCards -> {
+                state.value = state.value.copy(currentPage = event.pageNumber)
                 getYugiohCards()
             }
             is YugiohCardListEvent.UpdateSearchKeyword -> {
@@ -41,9 +41,9 @@ class YugiohCardListViewModel @Inject constructor(
     }
 
     private fun getYugiohCards() {
-        logger.log("Fetching Data with params { pageNumber: ${pageNumberState.value}, pageSize: $pageSize, keyword: '${state.value.searchKeyword}' }")
+        logger.log("Fetching Data with params { pageNumber: ${state.value.currentPage}, pageSize: $pageSize, keyword: '${state.value.searchKeyword}' }")
         getYugiohCards.execute(
-            pageNumber = pageNumberState.value,
+            pageNumber = state.value.currentPage,
             pageSize = pageSize,
             keyword = state.value.searchKeyword
         ).onEach { dataState ->
@@ -59,7 +59,29 @@ class YugiohCardListViewModel @Inject constructor(
                     }
                 }
                 is DataState.Data -> {
-                    state.value = state.value.copy(cards = dataState.data ?: emptyList())
+                    // Data related ops
+                    val cardList = dataState.data?.data ?: emptyList()
+
+                    // Metadata related ops
+                    val currentPage = state.value.currentPage
+                    val metadata = dataState.data?.metaData
+                    val lastPage = metadata?.totalPages?.plus(1) ?: 1
+                    val prevPageExists = metadata?.previousPageOffset != null
+                    val prevPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(currentPage - 1)) }
+                    val nextPageExists = metadata?.nextPageOffset != null
+                    val nextPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(currentPage + 1)) }
+                    val firstPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(1)) }
+                    val lastPageLambda = { onTriggerEvent(YugiohCardListEvent.GetYugiohCards(lastPage)) }
+                    state.value = state.value.copy(
+                        cards = cardList,
+                        totalPages = lastPage,
+                        prevPageButtonEnabled = prevPageExists,
+                        onPrevPageButtonClick = if (!prevPageExists) {{}} else {prevPageLambda},
+                        nextPageButtonEnabled = nextPageExists,
+                        onNextPageButtonClick = if (!nextPageExists) {{}} else {nextPageLambda},
+                        onFirstPageButtonClick = if (currentPage == 1) {{}} else {firstPageLambda},
+                        onLastPageButtonClick = if (currentPage == lastPage) {{}} else {lastPageLambda},
+                    )
                 }
                 is DataState.Loading -> {
                     state.value = state.value.copy(progressBarState = dataState.progressBarState)

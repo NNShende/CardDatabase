@@ -64,7 +64,7 @@ fun YugiohCardListItem(
             )
             Column(
                 modifier = Modifier
-                    .fillMaxWidth(.75f)
+                    .fillMaxWidth()
                     .padding(start = 12.dp, end = 12.dp)
             ) {
                 Text(
@@ -76,27 +76,21 @@ fun YugiohCardListItem(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
-                Text(
-                    modifier = Modifier
-                        .testTag(TAG_YUGIOH_CARD_DESC),
-                    text = yugiohCard.desc,
-                    style = MaterialTheme.typography.subtitle2,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis
-                )
-            }
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth() // Fill the rest of the width
-                    .padding(end = 12.dp),
-                horizontalAlignment = Alignment.End
-            ) {
-                Text(
-                    text = yugiohCard.type.typeName,
-                    style = MaterialTheme.typography.caption,
-                    color = Color(getCardTypeRgb(yugiohCard.type)),
-                    textAlign = TextAlign.End
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = yugiohCard.type.typeName,
+                        color = Color(getCardTypeRgb(yugiohCard.type)),
+                        style = MaterialTheme.typography.body1,
+                    )
+                    Text(
+                        text = yugiohCard.race.raceName,
+                        color = Color(getCardTypeRgb(yugiohCard.type)),
+                        style = MaterialTheme.typography.body1,
+                    )
+                }
             }
         }
     }
