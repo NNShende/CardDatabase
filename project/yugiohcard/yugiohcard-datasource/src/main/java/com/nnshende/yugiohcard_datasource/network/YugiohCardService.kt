@@ -9,7 +9,7 @@ import kotlinx.serialization.json.Json
 
 interface YugiohCardService {
 
-    suspend fun getCardList(num: Int, offset: Int): List<YugiohCard>
+    suspend fun getCardList(num: Int, offset: Int, keyword: String): List<YugiohCard>
 
     companion object Factory {
         fun build(): YugiohCardService {

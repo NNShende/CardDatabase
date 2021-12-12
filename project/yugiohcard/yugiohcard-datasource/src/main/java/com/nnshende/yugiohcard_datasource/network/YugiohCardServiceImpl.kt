@@ -11,9 +11,9 @@ class YugiohCardServiceImpl(
     private val httpClient: HttpClient
 ) : YugiohCardService {
 
-    override suspend fun getCardList(num: Int, offset: Int): List<YugiohCard> {
+    override suspend fun getCardList(num: Int, offset: Int, keyword: String): List<YugiohCard> {
         return httpClient.get<ApiResponseDto>{
-            url("${Endpoints.CARD_INFO}?num=$num&offset=$offset")
+            url("${Endpoints.CARD_INFO}?num=$num&offset=$offset&fname=$keyword")
         }.data.map { it.toYugiohCard() }
     }
 }

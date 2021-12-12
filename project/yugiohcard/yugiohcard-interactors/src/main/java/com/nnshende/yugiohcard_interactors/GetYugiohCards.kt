@@ -16,7 +16,8 @@ class GetYugiohCards(
 ) {
     fun execute(
         pageNumber: Int,
-        pageSize: Int
+        pageSize: Int,
+        keyword: String,
     ): Flow<DataState<List<YugiohCard>>> = flow {
         try {
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
@@ -24,7 +25,8 @@ class GetYugiohCards(
             val yugiohCards: List<YugiohCard> = try { // catch network exceptions
                 service.getCardList(
                     num = pageSize,
-                    offset = (pageNumber - 1) * pageSize
+                    offset = (pageNumber - 1) * pageSize,
+                    keyword = keyword
                 )
             } catch (e: Exception) {
                 e.printStackTrace()

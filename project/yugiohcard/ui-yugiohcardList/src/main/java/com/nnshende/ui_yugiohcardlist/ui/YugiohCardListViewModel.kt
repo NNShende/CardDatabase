@@ -19,16 +19,34 @@ class YugiohCardListViewModel @Inject constructor(
 ): ViewModel() {
 
     private val logger: Logger = Logger.buildDebug(TAG = "YugiohCardListViewModel")
+
     val state: MutableState<YugiohCardListState> = mutableStateOf(YugiohCardListState())
     private val pageNumberState: MutableState<Int> = mutableStateOf(1)
     private val pageSize = 25
 
     init {
-        getYugiohCards()
+        onTriggerEvent(YugiohCardListEvent.GetYugiohCards)
+    }
+
+    fun onTriggerEvent(event: YugiohCardListEvent) {
+        logger.log("Event Received: $event")
+        when (event) {
+            is YugiohCardListEvent.GetYugiohCards -> {
+                getYugiohCards()
+            }
+            is YugiohCardListEvent.UpdateSearchKeyword -> {
+                updateSearchKeyword(newKeyword = event.newKeyword)
+            }
+        }
     }
 
     private fun getYugiohCards() {
-        getYugiohCards.execute(pageNumber = pageNumberState.value, pageSize = pageSize).onEach { dataState ->
+        logger.log("Fetching Data with params { pageNumber: ${pageNumberState.value}, pageSize: $pageSize, keyword: '${state.value.searchKeyword}' }")
+        getYugiohCards.execute(
+            pageNumber = pageNumberState.value,
+            pageSize = pageSize,
+            keyword = state.value.searchKeyword
+        ).onEach { dataState ->
             when (dataState) {
                 is DataState.Response -> {
                     when (dataState.uiComponent) {
@@ -48,6 +66,10 @@ class YugiohCardListViewModel @Inject constructor(
                 }
             }
         }.launchIn(viewModelScope)
+    }
+
+    private fun updateSearchKeyword(newKeyword: String) {
+        state.value = state.value.copy(searchKeyword = newKeyword)
     }
 
 }

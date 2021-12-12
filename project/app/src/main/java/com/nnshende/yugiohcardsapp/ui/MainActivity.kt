@@ -64,6 +64,7 @@ fun NavGraphBuilder.addYugiohCardList(
         YugiohCardList(
             state = viewModel.state.value,
             imageLoader = imageLoader,
+            onEvent = viewModel::onTriggerEvent,
             navigateToDetailScreen = { id ->
                 navController.navigate("${Screen.YugiohCardDetail.route}/$id")
             }
