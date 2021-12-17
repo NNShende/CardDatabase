@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.ui.theme
+package com.nnshende.card_database.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

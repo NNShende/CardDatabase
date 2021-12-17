@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.ui.theme
+package com.nnshende.card_database.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.graphics.Color
@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.nnshende.yugiohcardsapp.R
+import com.nnshende.card_database.R
 
 private val QuickSand = FontFamily(
     Font(R.font.quicksand_light, FontWeight.W300),

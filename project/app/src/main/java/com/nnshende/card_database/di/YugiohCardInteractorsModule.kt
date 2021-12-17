@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.di
+package com.nnshende.card_database.di
 
 import android.app.Application
 import com.nnshende.yugiohcard_interactors.YugiohCardInteractors

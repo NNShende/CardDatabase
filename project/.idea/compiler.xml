@@ -2,6 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
+      <module name="CardDatabase.app" target="11" />
+      <module name="CardDatabase.buildSrc" target="11" />
+      <module name="CardDatabase.components" target="11" />
+      <module name="CardDatabase.yugiohcard.ui-yugiohcardDetail" target="11" />
+      <module name="CardDatabase.yugiohcard.ui-yugiohcardList" target="11" />
       <module name="YugiohCardsApp.app" target="11" />
       <module name="YugiohCardsApp.buildSrc" target="11" />
       <module name="YugiohCardsApp.components" target="11" />

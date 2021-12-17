@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.ui
+package com.nnshende.card_database.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,9 +16,9 @@ import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetail
 import com.nnshende.ui_yugiohcarddetail.ui.YugiohCardDetailViewModel
 import com.nnshende.ui_yugiohcardlist.ui.YugiohCardList
 import com.nnshende.ui_yugiohcardlist.ui.YugiohCardListViewModel
-import com.nnshende.yugiohcardsapp.R
-import com.nnshende.yugiohcardsapp.ui.navigation.Screen
-import com.nnshende.yugiohcardsapp.ui.theme.YugiohCardsAppTheme
+import com.nnshende.card_database.R
+import com.nnshende.card_database.ui.navigation.Screen
+import com.nnshende.card_database.ui.theme.YugiohCardsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

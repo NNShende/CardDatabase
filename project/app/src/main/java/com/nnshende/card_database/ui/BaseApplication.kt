@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.ui
+package com.nnshende.card_database.ui
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

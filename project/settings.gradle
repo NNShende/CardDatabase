@@ -6,7 +6,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "YugiohCardsApp"
+rootProject.name = "CardDatabase"
 include ':app'
 include ':core'
 include ':constants'

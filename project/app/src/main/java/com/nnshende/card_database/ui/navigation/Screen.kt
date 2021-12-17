@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp.ui.navigation
+package com.nnshende.card_database.ui.navigation
 
 import androidx.navigation.NavType
 import androidx.navigation.compose.NamedNavArgument

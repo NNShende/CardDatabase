@@ -1,4 +1,4 @@
-package com.nnshende.yugiohcardsapp
+package com.nnshende.card_database
 
 import org.junit.Test
 
