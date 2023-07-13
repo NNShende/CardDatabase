@@ -2,7 +2,7 @@
 
 - A Yugioh Card database using Jetpack Compose, built with Modular design
 
-| ## Screenshots  |
+| Screenshots  |
 |---|
 | <img width="376" alt="image" src="https://github.com/NNShende/CardDatabase/assets/29985541/5b3c6894-228c-44dc-af32-226b221931a6">  |
 | <img width="375" alt="image" src="https://github.com/NNShende/CardDatabase/assets/29985541/ab522a11-7e67-400f-a4fa-041c00d33feb">  |
